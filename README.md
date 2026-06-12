@@ -1,64 +1,75 @@
-##BUS RESERVATION SYSTEM USING JAVA, JDBC AND MYSQL
-PROJECT OVERVIEW
+# Bus Reservation System
 
---The Bus Reservation System is a simple Java application developed using JDBC and MySQL. 
---This application allows users to enter passenger details such as Passenger Name, Bus Number, and Date of Birth. 
---The entered details are stored in a MySQL database using JDBC connectivity.
+## Overview
 
-#TECHNOLOGIES USED
-• Java
-• JDBC (Java Database Connectivity)
-• MySQL Database
+The Bus Reservation System is a simple Java application developed using JDBC and MySQL. It allows users to enter passenger details and stores the information in a MySQL database.
 
-STEP 1: CREATE DATABASE
---Create a MySQL database named "busreservation".
+## Technologies Used
 
-STEP 2: CREATE TABLE
---Create a table named "reservation" to store passenger details such as passenger name, bus number, and date of birth.
+* Java
+* JDBC
+* MySQL
 
-STEP 3: ADD JDBC DRIVER
---Download and add the MySQL JDBC Driver (mysql-connector-j.jar) to the Java project.
+## Features
 
-STEP 4: ESTABLISH DATABASE CONNECTION
---Use JDBC API to connect the Java application with the MySQL database.
+* Add passenger details
+* Store reservation data in MySQL
+* JDBC database connectivity
+* Simple console-based interface
+* Easy record management
 
-STEP 5: RUN THE APPLICATION
---Compile and execute the Java program.
+## Database Setup
 
-STEP 6: ENTER PASSENGER DETAILS
-The application asks the user to enter:
-• Passenger Name
-• Bus Number
-• Date of Birth
+### Create Database
 
-**Example:
+```sql
+CREATE DATABASE busreservation;
+```
+
+### Create Table
+
+```sql
+CREATE TABLE reservation (
+    passenger_name VARCHAR(100),
+    bus_no INT,
+    date_of_birth DATE
+);
+```
+
+## How to Run
+
+1. Create the MySQL database and table.
+2. Add the MySQL JDBC Driver (`mysql-connector-j.jar`) to the project.
+3. Update database credentials in the Java code.
+4. Compile and run the application.
+5. Enter passenger details when prompted.
+
+## Sample Input
+
+```
 Passenger Name : Nirmal
 Bus Number : 101
 Date of Birth : 2007-05-15
+```
 
-STEP 7: STORE DATA IN DATABASE
---After entering the details, JDBC executes an SQL INSERT query and stores the information in the MySQL database.
+## Sample Output
 
-STEP 8: DISPLAY SUCCESS MESSAGE
---If the reservation is successful, the application displays:
-Your booking is confirmed
-Enter 1 to Book and 2 to exit.
+```
+Your booking is confirmed.
 Passenger details saved in MySQL Database.
+```
 
-STEP 9: VERIFY STORED DATA
---The saved records can be viewed from the MySQL database using a SELECT query.
-**FEATURES
-• Add passenger details
-• Store reservation data in MySQL
-• JDBC database connectivity
-• Simple and user-friendly interface
-• Easy record management
+## Advantages
 
-#ADVANTAGES
-• Reduces manual record keeping
-• Secure data storage
-• Fast and efficient data management
-• Helps understand Java and Database connectivity concepts
+* Reduces manual record keeping
+* Secure data storage
+* Fast data management
+* Easy to learn JDBC concepts
 
-#CONCLUSION
-The Bus Reservation System is a database-driven application developed using Java, JDBC, and MySQL. It demonstrates how Java applications interact with MySQL databases to store and manage passenger reservation details efficiently. This project is useful for learning JDBC connectivity and database operations in Java.
+## Conclusion
+
+This project demonstrates how Java applications connect with MySQL using JDBC to store and manage passenger reservation details efficiently.
+
+## Author
+
+POOMAGAL E
